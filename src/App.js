@@ -1,10 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
-import Button from './Components/Button';
-import HomeBox from './Components/HomeBox';
-import Subnavbar from "./Components/Subnavbar";
-import ButtonSmall from './Components/ButtonSmall';
 import {Routes, Route} from "react-router-dom";
 import HomePage from './Components/HomePage';
 import Hakkımda from './Components/Hakkımda';
@@ -43,7 +38,7 @@ const App=({auth})=> {
         <Route path='/About' element={<Hakkımda></Hakkımda>}>
         </Route>
 
-        <Route path='/Tools' element={<Tools auth={auth}></Tools>}>
+        <Route path='/Tools' element={<Tools auth={auth} user={user}></Tools>}>
 
         </Route>
 

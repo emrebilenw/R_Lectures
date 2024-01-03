@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar'
-import Subnavbar from './Subnavbar'
-import Button from './Button'
 import ButtonSmall from './ButtonSmall'
 import HomeBox from './HomeBox'
 import { Link } from 'react-router-dom';

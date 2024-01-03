@@ -38,6 +38,7 @@ const Navbar = (props) => {
                   </li>
                   <li className="nav-item col-1">
                     <NavLink style={navLinkStyles} to="/Tools" className="ml-3 nav-link text-white" >Araçlar</NavLink>
+                    
                   </li>
 
                   <li className="nav-item dropdown col-1">
