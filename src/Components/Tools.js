@@ -11,19 +11,19 @@ import ToolCard from './ToolCard';
 
         <div className='row'>
           <div className='col-6'>
-            <ToolCard user={this.props.user} src="/Images/indir.jpg" text="R Studio'da frekanslar hakkında her şeyi öğrenebileceğin bir R Studio dosyası. " title="Frekans ve Tabloları">
+            <ToolCard user={this.props.user} src="/images/indir.jpg" text="R Studio'da frekanslar hakkında her şeyi öğrenebileceğin bir R Studio dosyası. " title="Frekans ve Tabloları">
             </ToolCard>
-            <ToolCard user={this.props.user} src="/Images/rmarkdown (1).png" text="R MarkDown kullanarak dinamik grafik analizi yapmanı sağlaycak bir fonksiyon içeren R Markdown dosyası." title="Dinamik Grafik Analizi Fonksiyonu">
+            <ToolCard user={this.props.user} src="/images/rmarkdown (1).png" text="R MarkDown kullanarak dinamik grafik analizi yapmanı sağlaycak bir fonksiyon içeren R Markdown dosyası." title="Dinamik Grafik Analizi Fonksiyonu">
             </ToolCard>
-            <ToolCard user={this.props.user} src="/Images/indir.jpg" title="R studio'da Poisson Dağlımı" text="Poisson dağılımı nedir? Nerde kullanılmalıdır. Poisson için bir fonksiyon yapalım ve örnekler üzerinde işlem yapalım!">
+            <ToolCard user={this.props.user} src="/images/indir.jpg" title="R studio'da Poisson Dağlımı" text="Poisson dağılımı nedir? Nerde kullanılmalıdır. Poisson için bir fonksiyon yapalım ve örnekler üzerinde işlem yapalım!">
             </ToolCard>
           </div>
           <div className='col-6'>
-            <ToolCard user={this.props.user} src="/Images/indir.jpg" title="R Studio Başlangıç" text="Yeni başlayanlar için eğitici ve detaylı anlatım içeren R Studio dosyası">
+            <ToolCard user={this.props.user} src="/images/indir.jpg" title="R Studio Başlangıç" text="Yeni başlayanlar için eğitici ve detaylı anlatım içeren R Studio dosyası">
             </ToolCard>
-            <ToolCard user={this.props.user} src="/Images/indir.jpg" title="R studio'da Bayes' Theorem'i öğren" text="Koşullu olasılığın R dilinde örneklerini içeren öğretici dosyayı buradan indirebilirsin.">
+            <ToolCard user={this.props.user} src="/images/indir.jpg" title="R studio'da Bayes' Theorem'i öğren" text="Koşullu olasılığın R dilinde örneklerini içeren öğretici dosyayı buradan indirebilirsin.">
             </ToolCard>
-            <ToolCard user={this.props.user} src="/Images/indir.jpg" title="R Studio'da Hyper Distribution" text="R Studio da Hyper Distribution için bir fonksiyon oluşturalım. Oluşturduğumuz fonksiyonu çeşitli örnekler üzerinde kullanalım">
+            <ToolCard user={this.props.user} src="/images/indir.jpg" title="R Studio'da Hyper Distribution" text="R Studio da Hyper Distribution için bir fonksiyon oluşturalım. Oluşturduğumuz fonksiyonu çeşitli örnekler üzerinde kullanalım">
             </ToolCard>
           </div>
         </div>

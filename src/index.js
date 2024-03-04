@@ -6,8 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { collection, getFirestore, getDoc, getDocs } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
+
 
 
 const firebaseConfig = {
