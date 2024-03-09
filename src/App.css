@@ -31,6 +31,11 @@
   font-weight: bolder;
   font-size: large;
   font-palette: light;
+}.myFontPhone{
+  font-family: 'Poppins' sans-serif;
+  font-weight: bolder;
+  
+  font-palette: light;
 }
 .myFontSmall{
   font-family: 'Poppins' sans-serif;
@@ -77,11 +82,63 @@
   
   font-weight:500;
   /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
-}
-.myTextAbout11 {
+}.myTextAbout11 {
   font-family: 'Quicksand', sans-serif;
   
  
+  /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
+}.myTextAbout123 {
+  font-family: 'Quicksand', sans-serif;
+  font-size:large;
+  font-weight:500;
+  /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
+}.ProfileHeaderTxt {
+  font-family: 'Quicksand', sans-serif;
+  font-size:30px;
+  font-weight:1000;
+  /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
+}.ProfileContTxt {
+  font-family: 'Quicksand', sans-serif;
+  font-size:50px;
+  font-weight:600;
+  /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
+}.myInfoText {
+  font-family: 'Quicksand', sans-serif;
+  font-size:larger;
+  font-weight:1;
+  opacity: 0.5;
+  color: white;
+  /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
+}.myInfoText2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size:x-large;
+  font-weight:1000;
+  opacity: 0.65;
+  color: white;
+  /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
+}.myInfoText3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size:x-large;
+  font-weight:500;
+  color: white;
+  /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
+}.myInfoText4 {
+  font-family: 'Quicksand', sans-serif;
+  font-size:medium;
+  font-weight:500;
+  color: white;
+  /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
+}.myInfoText3phone {
+  font-family: 'Quicksand', sans-serif;
+  font-size:small;
+  font-weight:500;
+  color: white;
+  /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
+}.myInfoText4phone {
+  font-family: 'Quicksand', sans-serif;
+  font-size:small;
+  font-weight:500;
+  color: white;
   /* İsterseniz diğer font özelliklerini buraya ekleyebilirsiniz */
 }
 .boxShadow{

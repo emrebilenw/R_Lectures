@@ -20,10 +20,10 @@ class HomeBox extends Component {
       <img src='/Images/WebImg1.png' className="d-block d-flex "style={{borderRadius:"4px"}} alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="/Images/YoutubeIcon.png" className="d-block " alt="..."/>
+      <img src="/Images/YoutubeHome.png" className="d-block " alt="..."/>
     </div>
     <div className="carousel-item">
-      <img src="/Images/indir (2).jpg" className="d-block " alt="..."/>
+      <img src="/Images/whatsNew.png" className="d-block " alt="..."/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
