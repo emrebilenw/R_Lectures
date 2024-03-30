@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "mymeditation-react-app",
   "version": "0.1.0",
   "private": true,
@@ -45,5 +46,14 @@
   "hosting": {
     "site": "my-r-project",
     "public": "public"
+=======
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "file-saver": "^2.0.5",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+>>>>>>> 260326c80638cbe84a1ced29c0a893b788330594
   }
 }
