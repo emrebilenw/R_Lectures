@@ -13,13 +13,7 @@ import { getFunctions } from 'firebase/functions';
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBFDm_iZ6mxEFR_MrJHj0j2w1QRont3Vu4",
-  authDomain: "my-r-project-c6a30.firebaseapp.com",
-  projectId: "my-r-project-c6a30",
-  storageBucket: "my-r-project-c6a30.appspot.com",
-  messagingSenderId: "384081440114",
-  appId: "1:384081440114:web:3044464ad3aeab88c601eb",
-  measurementId: "G-VNDX7E6BKP"
+ 
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
