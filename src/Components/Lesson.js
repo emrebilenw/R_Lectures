@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { collection, addDoc } from "firebase/firestore"; 
+import { collection, addDoc, serverTimestamp, onSnapshot, query, orderBy} from "firebase/firestore"; 
 import { ref , uploadBytes} from "firebase/storage";
 import { getDownloadURL } from 'firebase/storage';
 import LessonRow from './LessonRow';
@@ -22,10 +22,12 @@ function Lesson(props) {
     });
   };
 
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await props.docTopPromise("Lessons", props.db);
+        const data = await props.docTopPromiseOrdered("Lessons", props.db);
         setLessonsData(data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -51,7 +53,8 @@ function Lesson(props) {
       await addDoc(collection(props.db, "Lessons"), {
         Lecture: formData.Lecture,
         Topic: formData.Topic,
-        DownloadUrl: downloadUrl
+        DownloadUrl: downloadUrl,
+        createdAt:serverTimestamp()
       });
       clearForm();
     } catch (error) {

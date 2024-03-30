@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect, useState } from 'react';
 import { getFunctions, httpsCallable } from "firebase/functions";
 export default function Profile(props) {
@@ -54,7 +53,7 @@ export default function Profile(props) {
         <ul className="list-unstyled">
             <li className="media"> 
               <div className="media-body">
-                <h5 class="mt-0 mb-1 ProfileHeaderTxt">Kullanıcı ismi</h5>
+                <h5 className="mt-0 mb-1 ProfileHeaderTxt">Kullanıcı ismi</h5>
                 
                 <input className="form-control " id="disabledInput" type="text" placeholder={userData.data && userData.data.name} disabled/>
               </div>
@@ -69,7 +68,7 @@ export default function Profile(props) {
             <li>
              {props.isAdmin?
              <form>
-              <div class="form-group">
+              <div className="form-group">
                 <label for="exampleFormControlInput1" className='ProfileHeaderTxt'>Make Admin</label>
                 <input type="email"
                   name='email'
@@ -79,7 +78,7 @@ export default function Profile(props) {
                   onChange={(e) => setEmail(e.target.value)} />
               </div>
               <div className='form-group'>
-              <button type="button" onClick={handleNewAdmin} class="btn btn-primary btn-lg btn-block">Admin yap</button>
+              <button type="button" onClick={handleNewAdmin} className="btn btn-primary btn-lg btn-block">Admin yap</button>
               </div>
              </form>
              :null}
@@ -109,7 +108,7 @@ export default function Profile(props) {
                        
         <div className='row pl-0'>
           <div className='col-5 mt-5 pl-0'>
-          <img className='' style={{width:"2000px"}} src='/images/633.png'>
+          <img className='' style={{width:"2000px"}} src='/Images/633.png'>
             </img>
           </div>
           <div className='col-7 mt-5'>
@@ -175,7 +174,7 @@ export default function Profile(props) {
                     onChange={(e) => setEmail(e.target.value)} />
                 </div>
                 <div className='form-group'>
-                <button type="button" onClick={handleNewAdmin} class="btn btn-primary btn-lg btn-block">Admin yap</button>
+                <button type="button" onClick={handleNewAdmin} className="btn btn-primary btn-lg btn-block">Admin yap</button>
                 </div>
                </form>
                :null}

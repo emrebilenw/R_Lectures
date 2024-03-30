@@ -36,7 +36,7 @@ const HakkımdaWithScreenControl = () => {
           gelişimimden elde ettiğim bilgileri paylaşarak insanlara katkıda bulunmak en büyük arzum.</p>
         <hr className="my-4" />
         <p>Kariyerim ile ilgili akademik bilgilere ulaşmak için tıklayınız.</p>
-        <a className="btn myTextAbout5 text-white" target='_blank' href='https://firebasestorage.googleapis.com/v0/b/my-r-project-c6a30.appspot.com/o/Constant%2FEmre-Bilen-Resume.pdf?alt=media&token=a6dceb8e-9de3-499c-9ab8-6d4d2219d57d' style={{ borderRadius: "20px", backgroundColor: "#00488b" }}>CV Görüntüle</a>
+        <a className="btn myTextAbout5 text-white" target='_blank' href='https://firebasestorage.googleapis.com/v0/b/my-r-project-c6a30.appspot.com/o/Constant%2FEmre-Bilen-Resume.pdf?alt=media&token=f6a46d01-1a32-46cb-9626-7fae732e861f' style={{ borderRadius: "20px", backgroundColor: "#00488b" }}>CV Görüntüle</a>
       </div>
     </div>
     <div className='row'>

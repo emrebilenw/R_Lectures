@@ -84,7 +84,7 @@ const Tools = (props) => {
                 key={toolData.id}
                 title={toolData.data.Title}
                 text={toolData.data.Content}
-                image={`images/${toolData.data.imageType}.png`}
+                image={`Images/${toolData.data.imageType}.png`}
                 DownloadUrl={toolData.data.DownloadUrl}
                 
                

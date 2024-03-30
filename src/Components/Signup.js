@@ -115,7 +115,7 @@ const Signup = ( props ) => {
                        
         <div className='row ml-5'>
           <div className='col-5 mt-5'>
-            <img className='ml-5' src='/images/imageWelcome.png'>
+            <img className='ml-5' src='/Images/imageWelcome.png'>
             </img>
           </div>
           <div className='col-7 mt-5'>
@@ -147,8 +147,8 @@ const Signup = ( props ) => {
               </div>
             </div>
             
-            {checkNick || nickname<1 ?null:<div class="alert alert-warning" role="alert">Kullanıcı ismi min 3, max 20 harf içerebilir!</div>}
-            {nickequality?<div class="alert alert-danger" role="alert">Bu kullanıcı adı başka biri tarafından kullanılmakta!</div>:null}
+            {checkNick || nickname<1 ?null:<div className="alert alert-warning" role="alert">Kullanıcı ismi min 3, max 20 harf içerebilir!</div>}
+            {nickequality?<div className="alert alert-danger" role="alert">Bu kullanıcı adı başka biri tarafından kullanılmakta!</div>:null}
             <div className="form-group row">
               <label htmlFor="inputEmail1" className="myTextAbout3 col-sm-2 col-form-label">Email</label>
               <div className="col-sm-10">
@@ -186,12 +186,12 @@ const Signup = ( props ) => {
               </div>
             </div>
 
-            {checkPass || password<1?null:<div class="alert alert-warning" role="alert">Yetersiz uzunluk, minimum 7 karakter giriniz</div>}
+            {checkPass || password<1?null:<div className="alert alert-warning" role="alert">Yetersiz uzunluk, minimum 7 karakter giriniz</div>}
             
 
-              {inequality?(<div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {inequality?(<div className="alert alert-warning alert-dismissible fade show" role="alert">
                 <strong>Parolalar eşleşmiyor!</strong> Parolaların aynı olduğundan emin olunuz.
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <button type="button" className="close" data-dismiss="alert" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>): <div></div> }            

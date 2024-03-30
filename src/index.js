@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDoc, getFirestore } from "firebase/firestore";
-import { collection, getDocs } from "firebase/firestore"; 
+import { collection, getDocs, query, onSnapshot, orderBy } from "firebase/firestore"; 
 import {  doc} from "firebase/firestore"; 
 import { getFunctions } from 'firebase/functions';
 import { getStorage } from "firebase/storage";
@@ -28,6 +28,28 @@ const db = getFirestore(firebaseApp);
 const functions= getFunctions(firebaseApp)
 const storage= getStorage(firebaseApp)
 
+const docTopPromiseOrdered = async (Collection, database) => {
+  return new Promise((resolve, reject) => {
+    let dataObjects = [];
+    const colRef = collection(database, Collection)
+    const q = query(colRef, orderBy("createdAt"))
+    onSnapshot(q, (snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        const dataObject = {
+          id: doc.id,
+          data: doc.data()
+        };
+        dataObjects.push(dataObject);
+      });
+      console.log(dataObjects); // Anlık verileri görmek için
+      resolve(dataObjects); // Promise'i çözerek verileri döndür
+    }, (error) => {
+      console.error("Error getting data:", error);
+      reject(error); // Hata durumunda Promise'i reddet
+    });
+  });
+}
+
 const docTopPromise=async (Collection,database)=>{
   let dataObjects = [];
   const querySnapshot = await getDocs(collection(database, Collection));
@@ -38,6 +60,7 @@ const docTopPromise=async (Collection,database)=>{
     };
     dataObjects.push(dataObject);
 });
+console.log(dataObjects)
 return dataObjects
 }
 
@@ -63,19 +86,13 @@ const getDocumentById = async (Collection, database, documentId) => {
 
 
 
-onAuthStateChanged(auth,user => {
-  if(user!=null) {
-    console.log("logged in!")
-  } else {
-    console.log("No user.")
-  }
-})
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <React.StrictMode> 
-      <App storage={storage} auth={auth} db={db} docTopPromise={docTopPromise} getDocumentById={getDocumentById} functions={functions}/> 
+      <App storage={storage} auth={auth} db={db} docTopPromise={docTopPromise} getDocumentById={getDocumentById} functions={functions} docTopPromiseOrdered={docTopPromiseOrdered}/> 
     </React.StrictMode>
   </BrowserRouter>
 );

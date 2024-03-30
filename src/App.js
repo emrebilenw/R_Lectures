@@ -14,8 +14,11 @@ import Lesson from './Components/Lesson';
 import Youtube from './Components/Youtube';
 import Profile from './Components/Profile';
 import { NavLink } from 'react-router-dom';
-
-const App = ({ auth, db, docTopPromise, getDocumentById, functions, storage }) => {
+// LOGO DEĞİŞTİR
+// HOŞGELDİN PAGE MOBİL UYUMLU DEĞİL
+// an animated element KALDIR
+// KAYDIRMA PROBLEMİNİN KAYNAĞINI ARA... --->
+const App = ({ auth, db, docTopPromise, getDocumentById, functions, storage, docTopPromiseOrdered }) => {
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(null);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -62,7 +65,7 @@ const App = ({ auth, db, docTopPromise, getDocumentById, functions, storage }) =
   };
 
   return (
-    <div className="App " style={{overflowX:"hidden"}}>
+    <div className="App">
 
       <Navbar auth={auth} user={user}></Navbar>
 
@@ -88,7 +91,7 @@ const App = ({ auth, db, docTopPromise, getDocumentById, functions, storage }) =
         <Route path='/Contact' element={<Contact></Contact>}>
         </Route>
 
-        <Route path='/Lectures' element={<Lesson screenWidth={screenWidth} user={user} storage={storage} db={db} docTopPromise={docTopPromise} isAdmin={isAdmin}></Lesson>}>
+        <Route path='/Lectures' element={<Lesson screenWidth={screenWidth} user={user} storage={storage} db={db} docTopPromise={docTopPromise} isAdmin={isAdmin} docTopPromiseOrdered={docTopPromiseOrdered}></Lesson>}>
         </Route>
 
         <Route path='/YouTube' element={<Youtube></Youtube>}>
@@ -102,113 +105,113 @@ const App = ({ auth, db, docTopPromise, getDocumentById, functions, storage }) =
       {screenWidth > 1000 ? (
         <div style={{ width: '100%', height: '500px', backgroundColor: '#00488b' }}>
           {<div style={{ width: '100%', height: '500px', backgroundColor: '#00488b' }}>
-<div className='row'>
-  <div className='col-2'></div>
-  <div className='col-8 myInfoText mt-5 d-flex justify-content-center align-items-center'>
-    <p> Eğitimlerimiz hakkında daha fazla bilgi almak ve kaydolmak için bize ulaşın!</p>
-  </div>
-  <div className='col-2'></div>
-
-  <div className='col-2'></div>
-  <div className='col-8 myInfoText2 d-flex justify-content-center align-items-center'>
-    <p> emrebilen1571@hotmail.com </p>
-  </div>
-  <div className='col-2'></div>
-
-  <div className='col-1'></div>
-  <div className='col-10'>
-    <hr />
-  </div>
-  <div className='col-1'></div>
-
-  <div className='col-1'></div>
-  <div className='col-10 mt-5 myInfoText3 d-flex justify-content-between align-items-center'>
-    <p>Marmara Data</p>
-    <p>Hesap İşlemleri</p>
-    <p> Site içi Bağlantılar </p>
-  </div>
-  <div className='col-1'></div>
-
-  <div className='col-1'></div>
-  <div className='col-10 mt-1 myInfoText4 d-flex justify-content-between align-items-center'>
-    <p></p>
-
-    <div style={{ marginLeft: "140px" }} className=' justify-content-center'>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Account">Hesabım</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Login">Giriş Yap</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Signup">Kayıt Ol</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Contact">Hesap Silme Talebi</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Contact">Şifre Değişim Talebi</NavLink>
-    </div>
-
-    <div style={{ marginRight: "40px" }} className=' justify-content-center'>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Home">Ana Sayfa</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/About">Hakkımda</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Tools">Araçlar</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Lectures">Ders Notları</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Youtube">Youtube</NavLink>
-    </div>
-
-  </div>
-
-  <div className='col-1'></div>
-</div>
-</div>}
-        </div>
-      ) : (
-        <div  style={{ width: '100%', height: '500px', backgroundColor: '#00488b' }}>
-          {
-<div className='' style={{ width: '100%', height: '500px', backgroundColor: '#00488b' }}>
-<div className='row ' style={{ backgroundColor: "#00488b", height:"500px"}}>
-  <div className='col-1 '></div>
-  <div className='col-10 myInfoText mt-5 d-flex justify-content-center align-items-center'>
-    <p> Eğitimlerimiz hakkında daha fazla bilgi almak ve kaydolmak için bize ulaşın!</p>
-  </div>
-  <div className='col-1'></div>
-
-  <div className='col-1'></div>
-  <div className='col-10 myInfoText2 d-flex justify-content-center align-items-center'>
-    <p> emrebilen1571@hotmail.com </p>
-  </div>
-  <div className='col-1'></div>
-
-  <div className='col-1'></div>
-  <div className='col-10'>
-    <hr />
-  </div>
-  <div className='col-1'></div>
-
-  <div className='col-1'></div>
-  <div className='col-10 mt-5 myInfoText3phone d-flex justify-content-center align-items-center'> <p>Marmara Data</p></div>
-  <div className='col-1'></div>
-
-  <div className='col-1'></div>
-  <div className='col-10 mt-5 myInfoText3phone d-flex justify-content-between align-items-center'> <p>Hesap İşlemleri</p> <p> Site içi Bağlantılar </p></div>
-  <div className='col-1'></div>
-
-  <div className='col-1'></div>
-  <div className='col-10 mt-1 myInfoText4phone d-flex justify-content-between align-items-center '>
-
-    <div style={{ marginLeft: "" }} className=' justify-content-center'>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Account">Hesabım</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Login">Giriş Yap</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Signup">Kayıt Ol</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Contact">Hesap Silme Talebi</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Contact">Şifre Değişim Talebi</NavLink>
-    </div>
-
-    <div style={{ marginRight: "" }} className=' justify-content-center'>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Home">Ana Sayfa</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/About">Hakkımda</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Tools">Araçlar</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Lectures">Ders Notları</NavLink>
-      <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Youtube">Youtube</NavLink>
-    </div>
-
-  </div>
-  <div className='pt-0 mt-0' style={{width:"100%", height:"50px",backgroundColor:"#00488b"}}></div>
-</div>
-</div>
+          <div className='row'>
+            <div className='col-2'></div>
+            <div className='col-8 myInfoText mt-5 d-flex justify-content-center align-items-center'>
+              <p> Eğitimlerimiz hakkında daha fazla bilgi almak ve kaydolmak için bize ulaşın!</p>
+            </div>
+            <div className='col-2'></div>
+          
+            <div className='col-2'></div>
+            <div className='col-8 myInfoText2 d-flex justify-content-center align-items-center'>
+              <p> emrebilen1571@hotmail.com </p>
+            </div>
+            <div className='col-2'></div>
+          
+            <div className='col-1'></div>
+            <div className='col-10'>
+              <hr />
+            </div>
+            <div className='col-1'></div>
+          
+            <div className='col-1'></div>
+            <div className='col-10 mt-5 myInfoText3 d-flex justify-content-between align-items-center'>
+              <p>Marmara Data</p>
+              <p>Hesap İşlemleri</p>
+              <p> Site içi Bağlantılar </p>
+            </div>
+            <div className='col-1'></div>
+          
+            <div className='col-1'></div>
+            <div className='col-10 mt-1 myInfoText4 d-flex justify-content-between align-items-center'>
+              <p></p>
+          
+              <div style={{ marginLeft: "140px" }} className=' justify-content-center'>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Account">Hesabım</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Login">Giriş Yap</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Signup">Kayıt Ol</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Contact">Hesap Silme Talebi</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Contact">Şifre Değişim Talebi</NavLink>
+              </div>
+          
+              <div style={{ marginRight: "40px" }} className=' justify-content-center'>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Home">Ana Sayfa</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/About">Hakkımda</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Tools">Araçlar</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Lectures">Ders Notları</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Youtube">Youtube</NavLink>
+              </div>
+          
+            </div>
+          
+            <div className='col-1'></div>
+          </div>
+          </div>}
+                  </div>
+                ) : (
+                  <div  style={{ width: '100%', height: '500px', backgroundColor: '#00488b' }}>
+                    {
+          <div className='' style={{ width: '100%', height: '500px', backgroundColor: '#00488b' }}>
+          <div className='row ' style={{ backgroundColor: "#00488b", height:"500px"}}>
+            <div className='col-1 '></div>
+            <div className='col-10 myInfoText mt-5 d-flex justify-content-center align-items-center'>
+              <p> Eğitimlerimiz hakkında daha fazla bilgi almak ve kaydolmak için bize ulaşın!</p>
+            </div>
+            <div className='col-1'></div>
+          
+            <div className='col-1'></div>
+            <div className='col-10 myInfoText2 d-flex justify-content-center align-items-center'>
+              <p> emrebilen1571@hotmail.com </p>
+            </div>
+            <div className='col-1'></div>
+          
+            <div className='col-1'></div>
+            <div className='col-10'>
+              <hr />
+            </div>
+            <div className='col-1'></div>
+          
+            <div className='col-1'></div>
+            <div className='col-10 mt-5 myInfoText3phone d-flex justify-content-center align-items-center'> <p>Marmara Data</p></div>
+            <div className='col-1'></div>
+          
+            <div className='col-1'></div>
+            <div className='col-10 mt-5 myInfoText3phone d-flex justify-content-between align-items-center'> <p>Hesap İşlemleri</p> <p> Site içi Bağlantılar </p></div>
+            <div className='col-1'></div>
+          
+            <div className='col-1'></div>
+            <div className='col-10 mt-1 myInfoText4phone d-flex justify-content-between align-items-center '>
+          
+              <div style={{ marginLeft: "" }} className=' justify-content-center'>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Account">Hesabım</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Login">Giriş Yap</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Signup">Kayıt Ol</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Contact">Hesap Silme Talebi</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Contact">Şifre Değişim Talebi</NavLink>
+              </div>
+          
+              <div style={{ marginRight: "" }} className=' justify-content-center'>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Home">Ana Sayfa</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/About">Hakkımda</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Tools">Araçlar</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Lectures">Ders Notları</NavLink>
+                <NavLink className="nav-link text-white pt-0 pb-0" style={navLinkStyles} to="/Youtube">Youtube</NavLink>
+              </div>
+          
+            </div>
+            <div className='pt-0 mt-0' style={{width:"100%", height:"50px",backgroundColor:"#00488b"}}></div>
+          </div>
+          </div>
 }
         </div>
       )}

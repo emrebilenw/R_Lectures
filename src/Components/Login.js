@@ -53,7 +53,7 @@ const Login = (props) => {
           <div>
             <div className='row ml-5'>
               <div className='col-5 mt-5'>
-                <img className='ml-5' src='/images/imageWelcome.png'></img>
+                <img className='ml-5' src='/Images/imageWelcome.png'></img>
               </div>
               <div className='col-7 mt-5'>
                 <h5 className='myFont inline ' style={{fontSize:"100px",color:"rgb(235,235,235)"}}>HOŞGELDİN,</h5>
@@ -111,7 +111,7 @@ const Login = (props) => {
                     <button onClick={handleLogin} type="submit" className="btn btn-lg btn-block myTextAbout5 text-white" style={{ backgroundColor: "#00488b", width: "100%" }}><strong>GİRİŞ YAP</strong></button>
                   </div>
                   {attempt==0?null:<div className='ml-3 mt-1'>
-                      <span  className="badge badge-light ">Hatalı giriş denemesi, lütfen bilgileri doğru girdiğinizden emin olunuz</span>{attempt>1?<span class="badge badge-danger">{attempt}</span>:null}
+                      <span  className="badge badge-light ">Hatalı giriş denemesi, lütfen bilgileri doğru girdiğinizden emin olunuz</span>{attempt>1?<span className="badge badge-danger">{attempt}</span>:null}
                     </div>}
                 </div>
               </form>
@@ -127,7 +127,7 @@ const Login = (props) => {
           <div>
             <div className='row '>
               <div className='col-1 mt-5'>
-                <img className=''style={{width:"400px",marginTop:"200px"}} src='/images/imageWelcome.png'></img>
+                <img className=''style={{width:"400px",marginTop:"200px"}} src='/Images/imageWelcome.png'></img>
               </div>
               <div className='col-7 mt-5'>
                 <h5 className='myFontPhone inline mb-0 pb-0' style={{fontSize:"50px",color:"rgb(235,235,235)"}}>HOŞGELDİN,</h5>
@@ -185,7 +185,7 @@ const Login = (props) => {
                     <button onClick={handleLogin} type="submit" className="btn btn-lg btn-block myTextAbout5 text-white" style={{ backgroundColor: "#00488b", width: "100%" }}><strong>GİRİŞ YAP</strong></button>
                   </div>
                   {attempt==0?null:<div className='ml-3 mt-1'>
-                      <span  className="badge badge-light ">Hatalı giriş denemesi, lütfen bilgileri doğru girdiğinizden emin olunuz</span>{attempt>1?<span class="badge badge-danger">{attempt}</span>:null}
+                      <span  className="badge badge-light ">Hatalı giriş denemesi</span>{attempt>1?<span className="badge badge-danger">{attempt}</span>:null}
                     </div>}
                 </div>
               </form>
